@@ -11,14 +11,12 @@
     ],
     "type": "composer-plugin",
     "autoload": {
-        "classmap": [
-            "src"
-        ]
+        "psr-0": {"SearchPortal\\Composer": "src/"}
     },
     "extra": {
         "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
     },
-    "require": {
+    "require-dev": {
         "composer-plugin-api": "1.0.0"
     }
 }
