@@ -14,7 +14,7 @@
         "psr-0": {"SearchPortal\\Composer": "src/"}
     },
     "extra": {
-        "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
+        "class": "SearchPortal\\Composer\\SearchPortalInstaller"
     },
     "require": {
         "composer-plugin-api": "1.0.0"

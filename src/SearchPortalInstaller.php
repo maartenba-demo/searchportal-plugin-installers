@@ -13,7 +13,7 @@ class SearchPortalInstaller extends LibraryInstaller
         parent::__construct($io, $composer, 'searchportal-plugin');
     }
 
-    protected function getInstallPath(PackageInterface $package)
+    public function getInstallPath(PackageInterface $package)
     {
         return 'app/plugins';
     }
