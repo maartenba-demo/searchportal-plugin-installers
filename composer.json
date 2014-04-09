@@ -11,10 +11,10 @@
     ],
     "type": "composer-plugin",
     "autoload": {
-        "psr-0": {"maartenballiauw\\Search\\Composer": "maartenballiauw/Search/Composer/"}
+        "psr-0": {"SearchPortal\\Composer": "/"}
     },
     "extra": {
-        "class": "maartenballiauw\\Search\\Composer\\SearchPortalInstallerPlugin"
+        "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
     },
     "require": {
         "composer-plugin-api": "1.0.0"

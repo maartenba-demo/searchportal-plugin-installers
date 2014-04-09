@@ -1,5 +1,5 @@
 <?php
-namespace maartenballiauw\SearchPortal\Composer;
+namespace SearchPortal\Composer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
