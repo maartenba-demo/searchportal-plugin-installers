@@ -9,12 +9,14 @@
             "email": "maarten.balliauw@jetbrains.com"
         }
     ],
-    "type": "composer-installer",
+    "type": "composer-plugin",
     "autoload": {
-        "psr-0": {"SearchPortal\\Composer": "src/"}
+        "classmap": [
+            "src"
+        ]
     },
     "extra": {
-        "class": "SearchPortal\\Composer\\SearchPortalInstaller"
+        "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
     },
     "require": {
         "composer-plugin-api": "1.0.0"
