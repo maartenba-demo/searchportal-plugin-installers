@@ -1,0 +1,22 @@
+{
+    "name": "maartenballiauw/searchportal-plugin-installers",
+    "description": "Plugin installers for SearchPortal.",
+    "minimum-stability": "stable",
+    "license": "Apache-2",
+    "authors": [
+        {
+            "name": "Maarten Balliauw",
+            "email": "maarten.balliauw@jetbrains.com"
+        }
+    ],
+    "type": "composer-plugin",
+    "autoload": {
+        "psr-0": {"maartenballiauw\\Search\\Composer": "maartenballiauw/Search/Composer/"}
+    },
+    "extra": {
+        "class": "maartenballiauw\\Search\\Composer\\SearchPortalInstallerPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "1.0.0"
+    }
+}
