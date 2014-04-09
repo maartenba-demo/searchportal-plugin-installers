@@ -1,7 +1,7 @@
 {
     "name": "maartenballiauw/searchportal-plugin-installers",
     "description": "Plugin installers for SearchPortal.",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "license": "Apache-2",
     "authors": [
         {
@@ -11,7 +11,7 @@
     ],
     "type": "composer-plugin",
     "autoload": {
-        "psr-0": {"SearchPortal\\Composer": [""]}
+        "psr-0": {"SearchPortal\\Composer": ""}
     },
     "extra": {
         "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
