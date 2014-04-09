@@ -13,9 +13,27 @@ class SearchPortalInstaller extends LibraryInstaller
         parent::__construct($io, $composer, 'searchportal-plugin');
     }
 
+    protected function appendPluginsJson(PackageInterface $package)
+    {
+        $fileName = 'app/plugins/plugins.json';
+
+        $json = json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
+        $json[$package->getPrettyName()] = $package->getPrettyName();
+        file_put_contents($fileName, json_encode($json));
+    }
+
+    protected function removePluginsJson(PackageInterface $package)
+    {
+        $fileName = 'app/plugins/plugins.json';
+
+        $json = json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
+        unset($json[$package->getPrettyName()]);
+        file_put_contents($fileName, json_encode($json));
+    }
+
     public function getInstallPath(PackageInterface $package)
     {
-        return 'app/plugins';
+        return 'app/plugins/' . $package->getPrettyName();
     }
 
     protected function installCode(PackageInterface $package)
@@ -23,11 +41,13 @@ class SearchPortalInstaller extends LibraryInstaller
         $downloadPath = $this->getInstallPath($package);
         $this->downloadManager->download($package, $downloadPath);
 
-        var_dump($package);
+        $this->appendPluginsJson($package);
     }
 
     protected function removeCode(PackageInterface $package)
     {
+        $this->removePluginsJson($package);
+
         $downloadPath = $this->getPackageBasePath($package);
         $this->downloadManager->remove($package, $downloadPath);
     }
