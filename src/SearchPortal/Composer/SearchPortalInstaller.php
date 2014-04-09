@@ -17,7 +17,7 @@ class SearchPortalInstaller extends LibraryInstaller
     {
         $fileName = 'app/plugins/plugins.json';
 
-        $json = json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
+        $json = (array)json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
         $json[$package->getPrettyName()] = (object)array('name' => $package->getPrettyName());
         file_put_contents($fileName, json_encode($json));
     }
@@ -26,7 +26,7 @@ class SearchPortalInstaller extends LibraryInstaller
     {
         $fileName = 'app/plugins/plugins.json';
 
-        $json = json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
+        $json = (array)json_decode(file_exists($fileName) ? file_get_contents($fileName) : '[]');
         unset($json[$package->getPrettyName()]);
         file_put_contents($fileName, json_encode($json));
     }
