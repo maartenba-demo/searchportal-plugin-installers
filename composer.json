@@ -9,7 +9,7 @@
             "email": "maarten.balliauw@jetbrains.com"
         }
     ],
-    "type": "composer-plugin",
+    "type": "composer-installer",
     "autoload": {
         "psr-0": {"SearchPortal\\Composer": "src/"}
     },
