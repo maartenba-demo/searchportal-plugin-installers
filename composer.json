@@ -16,7 +16,7 @@
     "extra": {
         "class": "SearchPortal\\Composer\\SearchPortalInstallerPlugin"
     },
-    "require-dev": {
+    "require": {
         "composer-plugin-api": "1.0.0"
     }
 }
